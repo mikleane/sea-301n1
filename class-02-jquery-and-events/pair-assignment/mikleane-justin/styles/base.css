@@ -1,10 +1,12 @@
 /* TODO: Add some coordinated colors to make the blog more distinguished:
          Use an accent color for all links, and remove their underline. */
 
+
 body {
   line-height: 1.5;
   font-size: 100%;
-  color: #313131;
+  color: #173e43;
+  margin:3em;
 }
 
 hr {
@@ -14,23 +16,36 @@ hr {
 
 /*TEXT STYLES
 =======================================*/
+header.site-header h1 {
+  font-size: 8em;
+}
+header.site-header p {
+  font-size: 2em;
+}
+
 p {
   font-size: 1em;
 }
-
 address {
   display: inline-block;
+}
+ul {
+list-style: none;
+
 }
 
 /*LINK STYLES
 =======================================*/
 
 a, a:link, a:active {
-  color: #777;
+  color: #3fb0ac;
+  text-decoration: none;
 }
 
 a:hover, a:focus {
+  color: #fae596;
 }
 
 a:visited {
+  /*color: lightpink;*/
 }

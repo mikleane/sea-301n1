@@ -1,6 +1,14 @@
 /* TODO: Give the site header a nice background color, from your selected color scheme. */
 
 .site-header {
+ padding: .5em;
+ color: #dddfd4;
+ background-color: #3fb0ac;
+ text-align:center;
+ border-radius:15px;
+
+}
+.site-header {
   padding: .1em;
 }
 
@@ -19,13 +27,27 @@
 
 /* TODO: Style the filters so they look good on small screens:
     Use the full width, and remove the list bullet. */
+.main-nav {
+  list-style-type: none;
+
+    }
 
 #filters {
+  min-width: 100% auto;
+  /*font-size: 4em;*/
   padding: 0;
 }
 
 #filters select {
 
+
+}
+#about section {
+  font-family: Cardo, serif;
+}
+.article-body {
+
+  font-family: Cardo, serif;
 }
 
 .template {
