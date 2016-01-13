@@ -1,4 +1,3 @@
-/* TODO: Give the site header a nice background color, from your selected color scheme. */
 
 .site-header {
  padding: .5em;
@@ -27,10 +26,6 @@
 
 /* TODO: Style the filters so they look good on small screens:
     Use the full width, and remove the list bullet. */
-.main-nav {
-  list-style-type: none;
-
-    }
 
 #filters {
   min-width: 100% auto;
