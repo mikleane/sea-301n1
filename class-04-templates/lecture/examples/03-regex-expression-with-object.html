@@ -7,7 +7,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js" charset="utf-8"></script>
 
   <script id="hello" type="text/template">
-    Hello {{who}}, my name is {{name}}, and I like {{what}}
+    Hello {{who}}, my name is {{name}}, and I like {{what}}.
+  </script>
+  <script id="goodbye" type="text/template">
+      Goodbye, {{who}}.  Remember to bring me {{what}}!
+
   </script>
 </head>
 <body>
@@ -15,11 +19,11 @@
   <script>
     var data = {
       who: "Students",
-      name: "Ivan",
+      name: "Mrs. Chouinard",
       what: "Apples"
     };
     var compile = function(template, expressions) {
-      return appTemplate.replace(/{{([A-Za-z]+)}}/g, swapper);
+      return template.replace(/{{([A-Za-z]+)}}/g, swapper);
       // where
       function swapper(match, capture) {
         return expressions[capture];
@@ -27,6 +31,10 @@
     };
     var appTemplate = $('#hello').html()
     var compiledTemplate = compile(appTemplate, data);
+    $('#app').append(compiledTemplate);
+
+    var appTemplate2 = $('#goodbye').html()
+    compiledTemplate = compile(appTemplate2, data);
     $('#app').append(compiledTemplate);
   </script>
 
