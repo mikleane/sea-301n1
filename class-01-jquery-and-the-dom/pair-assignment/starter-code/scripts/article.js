@@ -9,7 +9,7 @@ function Article (opts) {
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
 
-  $newArticle.data('category', this.category);
+  //$newArticle.data('category', this.category);
 
   // TODO: Use jQuery to fill in the template with properties
   // from this particular Article instance. We need to fill in:
@@ -21,7 +21,7 @@ Article.prototype.toHtml = function() {
 
   // Display the date as a relative number of "days ago":
   $newArticle.find('time').html('about ' + parseInt((new Date() - new Date(this.publishedOn))/60/60/24/1000) + ' days ago')
-
+  $newArticle.find('.article-body').html(this.body);
   $newArticle.append('<hr>');
 
   // TODO: This cloned article is no longer a template, so we should remove that class...
