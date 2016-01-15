@@ -10,14 +10,14 @@
 
 /* TODO: Add styles for the icon-menu class. It should be bigger, and off to the right. */
 .icon-menu {
-float: right;
-font-size: 1.5em;
-padding-right: 2em;
-padding-top: 1em;
+  float: right;
+  font-size: 1.5em;
+  padding-right: 2em;
+  padding-top: 1em;
 }
 
 .main-nav {
-  padding: 0.1em;
+  /*padding: 0.1em;*/
 }
 
 .main-nav ul {
@@ -33,7 +33,7 @@ padding-top: 1em;
 
 .main-nav li {
   margin-right: .4em;
-  font-size: 1.5em;
+  font-size: 1.25em;
   padding: .5em .2em;
   border-bottom: 1px solid #ccc;
 }
@@ -65,41 +65,35 @@ padding-top: 1em;
 @media only screen and (min-width: 768px) {
   .icon-menu {
     display: none;
-
   }
 
-/*  nav {
-    max-width: 100%;
-    background-color: #A72F00;
-    height: 40px;
-  }
   .main-nav {
-    list-style: none;
-    margin-bottom: 10px;
     max-width: 100%;
     text-align: center;
     background-color: #A72F00;
   }
   .main-nav ul {
-    list-style-type: none;
-    display: list-item;
+    display: flex;
+    flex-direction: row;
   }
+  .main-nav:hover ul {
+    display: flex;
+    flex-direction: row;
+  }
+  .main-nav li {
+    border-bottom: hidden;
 
-
+  }
   .main-nav li a {
-    padding: 10px;
     padding-right: 30px;
     padding-left: 30px;
     text-decoration: none;
-    font-weight: bold;
     color: #FFFFFF;
     background-color: #A72F00;
-    float: left;
+
   }
-
-
   .heading-group-h1 {
     float: none;
     text-align: center;
-}
+  }
 }
