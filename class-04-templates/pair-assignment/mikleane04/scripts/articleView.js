@@ -3,7 +3,7 @@ var articleView = {};
 
 articleView.populateFilters = function() {
   $('article').each(function() {
-    if (!$(this).hasClass('template')) {
+    if (!$(this).hasClass('byline')) {
       var val = $(this).find('address a').text();
       var optionTag = '<option value="' + val + '">' + val + '</option>';
       $('#author-filter').append(optionTag);
