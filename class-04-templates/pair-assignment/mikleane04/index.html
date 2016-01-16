@@ -22,11 +22,11 @@
             <h1>{{title}}</h1>
             <div class="byline">
               By <address><a href="{{authorUrl}}">{{author}}</a></address>
-              published <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
+              <time pubdate datetime="2000-01-01">{{publishStatus}}</time>
             </div>
         </header>
-          <section class="article-body">{{body}}</section>
-          <a href="#" class="read-on">Read on &rarr;</a>
+          <section class="article-body">{{{body}}}
+          <a href="#" class="read-on">Read on &rarr;</a></section>
       </script>
   </head>
   <body>
