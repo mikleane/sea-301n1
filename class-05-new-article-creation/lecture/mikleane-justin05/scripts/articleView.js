@@ -69,33 +69,42 @@ articleView.initNewArticlePage = function() {
   // Set up this "export" functionality. We can hide it for now, and show it once we have data to export.
   $('#article-export').hide();
   // TODO: Add an event handler to update the preview and the export field if any inputs change.
-  $('#new-form').on('focus', 'input', articleView.create);
+  $('#new-form').on('change', 'input', articleView.create);
 
 };
+
+
+
+
 
 articleView.create = function() {
   // TODO: Set up a var to hold the new article we are creating.
   // Clear out the #articles element, so we can put in the updated preview
-var newArticle;
-$('#articles').empty();
+  var newArticle;
+  var today = new Date();
+  var twoDigitMonth = ((today.getMonth().length+1) === 1)? (today.getMonth()+1) : '0' + (today.getMonth()+1);
+  var currentDate = today.getFullYear() + "/" + twoDigitMonth + "/" + today.getDate();
+  console.log(currentDate);
+
+  $('#articles').empty();
   // TODO: Instantiate an article based on what's in the form fields:
-newArticle = new Article({
+  newArticle = new Article({
     title:  $('#article-title').val(),
     body:   $('#article-body').val(),
     author: $('#article-author').val(),
     authorUrl:    $('#article-author-Url').val(),
     category:     $('#article-category').val(),
-    publishedOn:  $('#article-published:checked').length ? util.today() : null
-});
+    publishedOn:  $('#article-published:checked').length ? currentDate : null
+  });
 
   // TODO: Use our interface to the Handblebars template to put this new article into the DOM:
-$('#articles').append(newArticle.toHtml());
-$('#articles').show();
+  $('#articles').append(newArticle.toHtml());
+  $('#articles').show();
 
   // TODO: Activate the highlighting of any code blocks:
-$('pre code').each(function(i, block) {
-  hljs.highlightBlock(block)
-});
+  $('pre code').each(function(i, block) {
+    hljs.highlightBlock(block)
+  });
   // TODO: Export the new article as JSON, so it's ready to copy/paste into blogArticles.js:
   var jsonString = JSON.stringify(newArticle);
   $('#article-export').show();
