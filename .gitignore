@@ -2,6 +2,10 @@
 logs
 *.log
 
+.DS_Store
+*.DS_Store
+**/.DS_Store
+
 # Secrets
 githubToken.js
 
