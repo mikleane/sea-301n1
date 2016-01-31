@@ -43,8 +43,8 @@
     webDB.execute(
       [
       {
-    "sql": "INSERT INTO articles (id, title, category, author, authorUrl, publishedOn, body) VALUES (?, ?, ?, ?, ?, ?, ?)",
-    "data": [this.id, this.title, this.category, this.author, this.authorUrl, this.publishedOn,this.body]
+    "sql": "INSERT INTO articles (title, category, author, authorUrl, publishedOn, body) VALUES (?, ?, ?, ?, ?, ?)",
+    "data": [this.title, this.category, this.author, this.authorUrl, this.publishedOn,this.body]
     }
     ],
       callback
@@ -56,8 +56,8 @@
     webDB.execute(
       [
         {
-        "sql": "DELETE FROM articles WHERE id=? title=?, category=?, author=?, authorUrl=?, publishedOn=?, body=?",
-        "data": [this.id, this.title, this.category, this.author, this.authorUrl, this.publishedOn, this.body]
+        "sql": "DELETE FROM articles WHERE id=?",
+        "data": [this.id]
       }
         ],
       callback
