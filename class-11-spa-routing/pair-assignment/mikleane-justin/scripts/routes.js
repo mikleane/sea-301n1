@@ -3,6 +3,7 @@
 page('/', articlesController.index);
 page('/about', aboutController.index);
 // page('/article', articleController.index);
+page('/admin', adminController.index);
 // page('*', notfound);
 page();
 // TODO: What function do you call to activate page.js? Fire it off now, to execute
